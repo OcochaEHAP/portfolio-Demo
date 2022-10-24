@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800;900&display=swap");
+:root {
+  --white: #ffffff;
+  --body: #545d6d;
+  --dark: #202631;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-width: 1px;
+  --border-radius: 30px;
+}
+.btn {
+  padding: 24px;
+  border-width: 2px;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: Barlow, sans-serif;
+  color: var(--body);
+  line-height: 1.8;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+}
+a {
+  text-decoration: none;
+  color: var(--body);
+  transition: all 0.4s ease;
+  font-weight: 700;
+  &:hover {
+    color: var(--dark);
+  }
+}
+img {
+  width: 100%;
+}
+section {
+  padding-top: 170px;
+  padding-bottom: 170px;
+}
+.navbar {
+  position: absolute;
+  width: 100%;
+  padding: 16px 0;
+  .navbar-brand {
+    font-size: 38px;
+    text-transform: uppercase;
+  }
+  .navbar-nav {
+    .nav-link {
+      border-radius: 32px;
+      text-transform: uppercase;
+      font-size: 14px;
+      position: relative;
+      &:hover {
+        color: black;
+        background: var(--white);
+        // border: 2px solid black;
+      }
+    }
+    .social-links {
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--white);
+          width: 36px;
+          height: 36px;
+          border-radius: 100px;
+          font-size: 22px;
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+}
+#hero {
+  background-image: url(../imgs/hero.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  h1,
+  p {
+    color: var(--white);
+  }
+  h1 {
+    font-weight: 900;
+  }
+  p {
+    font-size: 18px;
+    max-width: 450px;
+  }
+  .auto-type {
+    font-size: 1.8rem;
+    color: #a1a2a4;
+  }
+}
+#about {
+  img {
+    border-radius: var(--border-radius);
+  }
+}
+#work {
+  background-color: var(--dark);
+  .btn {
+    padding: 24px;
+    border-width: 2px;
+    border-radius: 100px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .title {
+    font-weight: 900;
+    color: black;
+  }
+  .project {
+    .image-wrapper {
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      img {
+        border-radius: var(--border-radius);
+        transform: scale(1.1);
+        transition: all 0.4s ease;
+        aspect-ratio: 1 / 1;
+      }
+    }
+    &:hover .image-wrapper img {
+      transform: scale(1);
+    }
+    .title {
+      color: var(--white);
+      margin-top: 24px;
+    }
+    .link-arrow {
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      color: var(--body);
+      i {
+        transition: all 0.4s ease;
+      }
+      &:hover {
+        color: white;
+        i {
+          transform: translate(5px, -5px);
+        }
+      }
+    }
+
+    // .link-arrow.link-dark {
+
+    // }
+    // .link-arrow.link-dark:hover {
+    // }
+  }
+}
+@media (max-width: 992px) {
+  #work .btn {
+    margin-bottom: 35px;
+  }
+}
+#contact {
+  form {
+    padding: 32px;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    .form-control {
+      background-color: #f8f8f8;
+      border: transparent;
+      border-radius: var(--border-radius);
+      padding-left: 18px;
+    }
+    input.form-control {
+      height: 54px;
+    }
+  }
+}
+footer {
+  .social-links {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--white);
+        width: 36px;
+        height: 36px;
+        border-radius: 100px;
+        font-size: 22px;
+        margin-right: 14px;
+      }
+    }
+  }
+  .email {
+    color: black;
+  }
+}
+
+.intro {
+  margin-bottom: 60px;
+}
+
+.intro .hr-line {
+  width: 60px;
+  height: 4px;
+  background-color: var(--dark);
+  display: inline-block;
+}
+
+.intro h1 {
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  color: black;
+}
+
+.intro p {
+  max-width: 500px;
+}
+
+.intro.intro-dark h1,
+.intro.intro-dark p {
+  color: white;
+}
+
+.intro.intro-dark .hr-line {
+  background-color: white;
+}
