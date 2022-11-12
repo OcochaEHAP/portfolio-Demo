@@ -42,9 +42,6 @@ a {
   transition: all 0.4s ease;
   font-weight: 700;
 }
-a:hover {
-  color: var(--dark);
-}
 
 img {
   width: 100%;
@@ -69,10 +66,6 @@ section {
   text-transform: uppercase;
   font-size: 14px;
   position: relative;
-}
-.navbar .navbar-nav .nav-link:hover {
-  color: black;
-  background: var(--white);
 }
 .navbar .navbar-nav .social-links ul {
   display: flex;
@@ -147,9 +140,6 @@ section {
   transition: all 0.4s ease;
   aspect-ratio: 1/1;
 }
-#work .project:hover .image-wrapper img {
-  transform: scale(1);
-}
 #work .project .title {
   color: var(--white);
   margin-top: 24px;
@@ -162,12 +152,6 @@ section {
 }
 #work .project .link-arrow i {
   transition: all 0.4s ease;
-}
-#work .project .link-arrow:hover {
-  color: white;
-}
-#work .project .link-arrow:hover i {
-  transform: translate(5px, -5px);
 }
 
 @media (max-width: 992px) {
@@ -240,4 +224,23 @@ footer .email {
 
 .intro.intro-dark .hr-line {
   background-color: white;
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--dark);
+  }
+  .link-arrow:hover {
+    color: white;
+  }
+  .link-arrow:hover i {
+    transform: translate(5px, -5px);
+  }
+  .nav-link:hover {
+    color: black;
+    background: var(--white);
+  }
+  .project:hover .image-wrapper img {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=style.css.map */
